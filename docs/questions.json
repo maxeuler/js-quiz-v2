@@ -1,0 +1,82 @@
+[
+	{
+		"question": "What does [...'Array'] return?",
+		"correct": "['A', 'r', 'r', 'a', 'y']",
+		"wrong1": "['Array']",
+		"wrong2": "[['A', 'r', 'r', 'a', 'y']]",
+		"wrong3": "[[], 'Array']",
+		"explanation": "The spread operator maps every character of an iterable to one element. A string is an iterable."
+	},
+	{
+		"question": "What is the output of console.log(undefined * 2) ?",
+		"correct": "NaN",
+		"wrong1": "0",
+		"wrong2": "undefined",
+		"wrong3": "TypeError",
+		"explanation": "Calculating with undefined results in 'not a number'."
+	},
+	{
+		"question": "What is not a way to type cast values?",
+		"correct": "typeof",
+		"wrong1": "Boolean()",
+		"wrong2": "String()",
+		"wrong3": "parseFloat()",
+		"explanation": "The typeof operator simply returns the data type of the operand."
+	},
+	{
+		"question": "How can you empty this: let array = [1, 2, 3, 4] ?",
+		"correct": "array.length = 0",
+		"wrong1": "array.length = null",
+		"wrong2": "array.empty()",
+		"wrong3": "array.slice(-1)",
+		"explanation": "By setting the array's length to 0, we remove all elements from the original array."
+	},
+	{
+		"question": "What is the output of +true ?",
+		"correct": "1",
+		"wrong1": "false",
+		"wrong2": "TypeError",
+		"wrong3": "undefined",
+		"explanation": "The unary plus tries to convert an operand to a number. True is 1 and false is 0."
+	},
+	{
+		"question": "What is the output of !hello ?",
+		"correct": "false",
+		"wrong1": "true",
+		"wrong2": "TypeError",
+		"wrong3": "NaN",
+		"explanation": "A string is a truthy value. Not truthy is falsey, so the output is false."
+	},
+	{
+		"question": "How to get the length of: const obj = {1: 'a', 2: 'b'} ?",
+		"correct": "Object.keys(obj).length",
+		"wrong1": "obj.length",
+		"wrong2": "obj.size()",
+		"wrong3": "Array.of(obj).length",
+		"explanation": "Object.keys() returns an arry of the keys, so we can use the length property of Array."
+	},
+	{
+		"question": "How can we remove the duplicates: const array = [1, 2, 1, 3] ?",
+		"correct": "[...new Set(array)]",
+		"wrong1": "array.remove(1)",
+		"wrong2": "array.set()",
+		"wrong3": "array.filter()",
+		"explanation": "We create a new set which has no duplicates. By using the spread operator we create a new array and fill it with our new set."
+	},
+	{
+		"question": "What is a high-order function?",
+		"correct": "A function that takes or passes out a function",
+		"wrong1": "A function without return value",
+		"wrong2": "An asynchronous function",
+		"wrong3": "A function that manipulates global state",
+		"explanation": "A high-order function is just a function that takes a function as an argument or returns a function. They simplify our code and keep it DRY (don't repeat yourself)."
+	},
+	{
+		"question": "What is the output: NaN === NaN ?",
+		"correct": "false",
+		"wrong1": "true",
+		"wrong2": "NaN",
+		"wrong3": "TypeError",
+		"explanation": "The definition of the IEEE says: 'Every NaN shall compare unordered with everything, including itself.'"
+	}
+]
