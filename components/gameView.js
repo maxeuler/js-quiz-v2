@@ -5,6 +5,7 @@ import axios from 'axios';
 import QuestionCard from './questionCard';
 import GameControl from './gameControl';
 import GameOver from './gameoverView';
+import questions from '../docs/questions.json';
 
 const Background = styled.div`
   position: absolute;
@@ -83,14 +84,11 @@ class GameView extends Component {
   };
 
   async componentDidMount() {
-    const res = await axios.get(this.URL);
-    if (res.data) {
-      const shuffledQuestions = res.data.sort(() => Math.random() - 0.5);
-      this.setState({
-        questions: shuffledQuestions,
-        questionsCount: shuffledQuestions.length,
-      });
-    }
+    const shuffledQuestions = questions.sort(() => Math.random() - 0.5);
+    this.setState({
+      questions: shuffledQuestions,
+      questionsCount: shuffledQuestions.length,
+    });
   }
 
   answerSelected = e => {
